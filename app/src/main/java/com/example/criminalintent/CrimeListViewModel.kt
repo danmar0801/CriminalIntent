@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import java.util.Date
 import java.util.UUID
 
+
 class CrimeListViewModel : ViewModel() {
     val crimes = mutableListOf<crime>()
 
