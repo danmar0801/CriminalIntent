@@ -1,5 +1,6 @@
 package com.example.criminalintent
 
+import android.text.format.DateFormat
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
@@ -10,7 +11,9 @@ class CrimeHolder(
 ) : RecyclerView.ViewHolder(binding.root){
     fun bind(crime: crime){
         binding.crimeTitle.text = crime.title
-        binding.crimeDate.text = crime.date.toString()
+        //DateFormat Challenge
+        //binding.crimeDate.text = crime.date.toString()//old date format
+        binding.crimeDate.text = DateFormat.format("EEE dd MMM yyyy, hh:mm", crime.date)
 
         binding.root.setOnClickListener {
             Toast.makeText(
